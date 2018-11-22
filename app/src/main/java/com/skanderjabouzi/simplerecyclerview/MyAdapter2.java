@@ -67,6 +67,11 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder> {
         return mData.size();
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        return sectionHeader.contains(position) ? TYPE_SEPARATOR : TYPE_ITEM;
+    }
+
 
     // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
