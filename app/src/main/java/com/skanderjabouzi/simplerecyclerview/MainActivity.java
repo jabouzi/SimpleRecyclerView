@@ -1,71 +1,44 @@
 package com.skanderjabouzi.simplerecyclerview;
 
+import android.content.Intent;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.Button;
 
-import java.util.ArrayList;
+public class MainActivity extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity implements MyAdapter.ItemClickListener {
-
-    MyAdapter adapter;
+    Button button1;
+    Button button2;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        button1 = findViewById(R.id.button1);
+        button2 = findViewById(R.id.button2);
+        button1.setOnClickListener(buttonClicked);
+        button2.setOnClickListener(buttonClicked);
 
-        ArrayList<Book> books = new ArrayList<>();
-        Book mBook = new Book();
-        mBook.setBookName("Android Developer Guide");
-        mBook.setAuthor("Leon");
-        mBook.setPublishTime(2014);
-        books.add(mBook);
-        mBook = new Book();
-        mBook.setBookName("C++ Developer Guide");
-        mBook.setAuthor("John");
-        mBook.setPublishTime(2015);
-        books.add(mBook);
-        mBook = new Book();
-        mBook.setBookName("Java Developer Guide");
-        mBook.setAuthor("Marc");
-        mBook.setPublishTime(2013);
-        books.add(mBook);
-        mBook = new Book();
-        mBook.setBookName("C# Developer Guide");
-        mBook.setAuthor("Steve");
-        mBook.setPublishTime(2010);
-        books.add(mBook);
-        mBook = new Book();
-        mBook.setBookName("Swift Developer Guide");
-        mBook.setAuthor("Stewart");
-        mBook.setPublishTime(2009);
-        books.add(mBook);
-        mBook = new Book();
-        mBook.setBookName("PHP Developer Guide");
-        mBook.setAuthor("Jim");
-        mBook.setPublishTime(2008);
-        books.add(mBook);
-        mBook = new Book();
-        mBook.setBookName("Objective-C Developer Guide");
-        mBook.setAuthor("Robert");
-        mBook.setPublishTime(20007);
-        books.add(mBook);
-
-
-        // set up the RecyclerView
-        RecyclerView recyclerView = findViewById(R.id.rvAnimals);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new MyAdapter(this, books);
-        adapter.setClickListener(this);
-        recyclerView.setAdapter(adapter);
     }
 
-    @Override
-    public void onItemClick(View view, int position) {
-        Toast.makeText(this, "You clicked " + adapter.getItem(position).getPublishTime() + " on row number " + position, Toast.LENGTH_SHORT).show();
-    }
+    private View.OnClickListener buttonClicked = new View.OnClickListener() {
+        public void onClick(View v) {
+            // So we will make
+            switch (v.getId() /*to get clicked view id**/) {
+                case R.id.button1:
+                    intent = new Intent(v.getContext(), RecyclerViewActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.button2:
+                    intent = new Intent(v.getContext(), RecyclerViewActivity2.class);
+                    startActivity(intent);
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
 }

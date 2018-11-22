@@ -7,31 +7,58 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.TreeSet;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private List<Book> mData;
+public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder> {
+    private static final int TYPE_ITEM = 0;
+    private static final int TYPE_SEPARATOR = 1;
+
+    private ArrayList<String> mData = new ArrayList<String>();
+    private TreeSet<Integer> sectionHeader = new TreeSet<Integer>();
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
+    private View view;
 
     // data is passed into the constructor
-    MyAdapter(Context context, List<Book> data) {
+    MyAdapter2(Context context) {
         this.mInflater = LayoutInflater.from(context);
-        this.mData = data;
+    }
+
+    public void addItem(final String item) {
+        mData.add(item);
+        notifyDataSetChanged();
+    }
+
+    public void addSectionHeaderItem(final String item) {
+        mData.add(item);
+        sectionHeader.add(mData.size() - 1);
+        notifyDataSetChanged();
+    }
+
+    public int getViewTypeCount() {
+        return 2;
     }
 
     // inflates the row layout from xml when needed
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.recyclerview_row, parent, false);
+        switch (viewType) {
+            case TYPE_ITEM:
+                view = mInflater.inflate(R.layout.snippet_item1, parent, false);
+                break;
+            case TYPE_SEPARATOR:
+                view = mInflater.inflate(R.layout.snippet_item2, parent, false);
+                break;
+        }
         return new ViewHolder(view);
     }
 
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Book book = mData.get(position);
-        holder.myTextView.setText(book.getBookName() + " - " + book.getAuthor());
+        holder.myTextView.setText(mData.get(position));
     }
 
     // total number of rows
@@ -47,7 +74,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         ViewHolder(View itemView) {
             super(itemView);
-            myTextView = itemView.findViewById(R.id.itemName);
+            myTextView = itemView.findViewById(R.id.text);
             itemView.setOnClickListener(this);
         }
 
@@ -58,7 +85,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     // convenience method for getting data at click position
-    Book getItem(int id) {
+    String getItem(int id) {
         return mData.get(id);
     }
 
