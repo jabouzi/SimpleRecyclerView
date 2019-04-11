@@ -1,0 +1,6 @@
+
+psquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(óÒS8 ±ªã -
+ª%squid:RedundantThrowsDeclarationCheck+"mRemove the declaration of thrown exception 'java.lang.IllegalArgumentException' which is a runtime exception.(æú·ëüÿÿÿÿ8¨ËÚä -
+gsquid:S00119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(óÒS8µäøã -
+"squid:ClassVariableVisibilityCheck"VMake viewHolder a static final constant or non-public and provide accessors if needed.(ˆß‚Ùúÿÿÿÿ8Ëã©ã -
+Psquid:S1068"-Remove this unused "mInflater" private field.(ÉÁ’ïúÿÿÿÿ8Øƒ™ä -

@@ -9,6 +9,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RecyclerViewActivity2 extends AppCompatActivity implements MyAdapter2.ItemClickListener {
+public class RecyclerViewActivity2 extends AppCompatActivity implements ItemClickListener {
 
     MyAdapter2 adapter;
     private HashMap<String, ArrayList<String>> list;
@@ -36,6 +37,10 @@ public class RecyclerViewActivity2 extends AppCompatActivity implements MyAdapte
         adapter = new MyAdapter2(this);
         adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
+
+        SwipeController swipeController = new SwipeController();
+        ItemTouchHelper itemTouchhelper = new ItemTouchHelper(swipeController);
+        itemTouchhelper.attachToRecyclerView(recyclerView);
 
         list = new HashMap<>();
         ArrayList<String> data1 = new ArrayList<String>();

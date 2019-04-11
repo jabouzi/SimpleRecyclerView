@@ -1,5 +1,6 @@
 package com.skanderjabouzi.simplerecyclerview;
 
+import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,11 +8,14 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class RecyclerViewActivity extends AppCompatActivity implements MyAdapter.ItemClickListener {
+public class RecyclerViewActivity extends AppCompatActivity implements ItemClickListener {
 
     MyAdapter adapter;
 
@@ -63,18 +67,33 @@ public class RecyclerViewActivity extends AppCompatActivity implements MyAdapter
 
 
         // set up the RecyclerView
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        final RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         DividerItemDecoration itemDecorator = new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL);
         itemDecorator.setDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.divider));
         recyclerView.addItemDecoration(itemDecorator);
         adapter = new MyAdapter(this, books);
-        adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
+//        TextView text = findViewById(R.id.text);
+        adapter.setClickListener(this);
+//        text.setOnClickListener(
+//                new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        LinearLayout onbaord = findViewById(R.id.onbaord);
+//                        onbaord.setVisibility(View.GONE);
+//                    }
+//                }
+//        );
+//
+
+        Intent intent = new Intent(this, TransparentActivity.class);
+        startActivity(intent);
     }
 
     @Override
     public void onItemClick(View view, int position) {
+        if (findViewById(R.id.onbaord).getVisibility() == View.GONE)
         Toast.makeText(this, "You clicked " + adapter.getItem(position).getPublishTime() + " on row number " + position, Toast.LENGTH_SHORT).show();
     }
 }

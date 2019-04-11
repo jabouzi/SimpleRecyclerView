@@ -1,0 +1,8 @@
+
+dsquid:UselessImportCheck"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ8„ëÑœ -
+Hsquid:S1068"+Remove this unused "context" private field.(êİç8„ëÑœ -
+isquid:UselessImportCheck"?Remove this unused import 'android.support.annotation.NonNull'.(¼Åß8„ëÑœ -
+squid:S1488"^Immediately return this expression instead of assigning it to the temporary variable "holder".(ğé‚ßùÿÿÿÿ8„ëÑœ -
+^squid:UselessImportCheck".Remove this unused import 'android.view.View'.(Ø½­äşÿÿÿÿ8„ëÑœ -
+œsquid:S1319*"yThe type of the "savedCardItemz" object should be an interface such as "List" rather than the implementation "ArrayList".(Ô÷¥ñøÿÿÿÿ8„ëÑœ -
+squid:S1319"pThe type of the "items" object should be an interface such as "List" rather than the implementation "ArrayList".(ŒÂÚÊ8„ëÑœ -

@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button button1;
     Button button2;
+    Button button3;
     Intent intent;
 
     @Override
@@ -19,8 +20,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
         button1.setOnClickListener(buttonClicked);
         button2.setOnClickListener(buttonClicked);
+        button3.setOnClickListener(buttonClicked);
+        button2.setBackground(getDrawable(R.drawable.button_blue));
+        button3.setBackground(getDrawable(R.drawable.button_blue));
 
     }
 
@@ -34,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.button2:
                     intent = new Intent(v.getContext(), RecyclerViewActivity2.class);
+                    startActivity(intent);
+                    break;
+                case R.id.button3:
+                    intent = new Intent(v.getContext(), RecyclerViewDynamicActivity.class);
                     startActivity(intent);
                     break;
                 default:
