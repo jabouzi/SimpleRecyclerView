@@ -1,7 +1,10 @@
 
-psquid:S2293."YReplace the type specification in this constructor call with the diamond operator ("<>").(Ğ²Õè
-psquid:S2293/"YReplace the type specification in this constructor call with the diamond operator ("<>").(Şäœ
-jsquid:S1450"SRemove the "list" field and declare it as a local variable in the relevant methods.(ÂÚòø
-ssquid:UselessImportCheck"ORemove this unused import 'android.support.design.widget.FloatingActionButton'.(„Ÿ¹¼
-asquid:UselessImportCheck">Remove this unused import 'android.support.v7.widget.Toolbar'.(à½£
-fsquid:UselessImportCheck"CRemove this unused import 'android.support.design.widget.Snackbar'.( À®p
+p
+java:S1450"SRemove the "list" field and declare it as a local variable in the relevant methods.(ÂÚòø8°­¬°À.
+v
+java:S2293."YReplace the type specification in this constructor call with the diamond operator ("<>").(Şäœ8°­¬°À.
+v
+java:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ğ²Õè8°­¬°À.
+`
+java:S1128
+">Remove this unused import 'androidx.appcompat.widget.Toolbar'.(ÔËûİùÿÿÿÿ8Èïø©Â.

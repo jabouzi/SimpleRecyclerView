@@ -1,0 +1,12 @@
+
+C	java:S131/""Add a default case to this switch.(ÿ¶°Øüÿÿÿÿ8¨š¥ü–.
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ô¡8¨š¥ü–.
+U
+java:S1128"8Remove this unused import 'androidx.annotation.NonNull'.(ˆÛúÜ8íø©Â.
+V
+java:S3400)"9Remove this method and declare a constant for this value.(Úåö8¨š¥ü–.
+m
+java:S1301/"KReplace this "switch" statement by "if" statements to increase readability.(ÿ¶°Øüÿÿÿÿ8¨š¥ü–.
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‚®€éùÿÿÿÿ8¨š¥ü–.

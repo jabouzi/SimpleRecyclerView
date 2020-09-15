@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main3Activity"></activity>
+        <activity android:name=".v2.PlayersActivity"
+            android:parentActivityName=".v2.TeamsActivity"></activity>
+        <activity android:name=".v2.TeamsActivity"/>
+        <activity android:name=".Main3Activity" />
         <activity android:name=".RecyclerViewDynamicActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

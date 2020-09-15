@@ -37,3 +37,15 @@ Lapp/src/main/java/com/skanderjabouzi/simplerecyclerview/GenericAdapter2.java,8
 app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
 x
 Happ/src/main/java/com/skanderjabouzi/simplerecyclerview/ViewHolder3.java,8/4/844f61113ecc1a717a1750601b07d4a5c84087f1
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+w
+Gapp/src/main/java/com/skanderjabouzi/simplerecyclerview/MyAdapter2.java,3/f/3fec6b5b35e5955a3ccbaf7e895b90b1bebfd1c0
+<
+build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
+X
+(gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
+{
+Kapp/src/main/java/com/skanderjabouzi/simplerecyclerview/v2/TeamsActivity.kt,f/c/fc5dd3b6951c346070b8692ff50f9595d68fa497
+}
+Mapp/src/main/java/com/skanderjabouzi/simplerecyclerview/v2/PlayersActivity.kt,3/4/3425d6b999a543fce60d3f4075fba8f5a333edef
