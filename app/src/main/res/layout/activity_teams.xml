@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".v2.TeamsActivity">
 
-    <include android:id="@+id/titles" layout="@layout/teams_title_item"></include>
+    <include android:id="@+id/titles" layout="@layout/teams_titles"></include>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/teamsRecyclerView"

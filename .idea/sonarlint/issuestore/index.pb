@@ -49,3 +49,17 @@ X
 Kapp/src/main/java/com/skanderjabouzi/simplerecyclerview/v2/TeamsActivity.kt,f/c/fc5dd3b6951c346070b8692ff50f9595d68fa497
 }
 Mapp/src/main/java/com/skanderjabouzi/simplerecyclerview/v2/PlayersActivity.kt,3/4/3425d6b999a543fce60d3f4075fba8f5a333edef
+t
+Dapp/src/main/java/com/skanderjabouzi/simplerecyclerview/v2/Player.kt,2/f/2f820b20872255cc59975d9ad6dd20fc058fe821
+|
+Lapp/src/main/java/com/skanderjabouzi/simplerecyclerview/v2/PlayersAdapter.kt,c/1/c159533bdaabc44c4c804ea28080c05872c50472
+u
+Eapp/src/main/java/com/skanderjabouzi/simplerecyclerview/v2/Players.kt,b/0/b015a8db86ee6e52dd2511c5692ee618807b50ce
+s
+Capp/src/main/java/com/skanderjabouzi/simplerecyclerview/v2/Teams.kt,a/d/ada06c496dd9101de7dd37a12bdff375deba4061
+
+Oapp/src/main/java/com/skanderjabouzi/simplerecyclerview/v2/TeamsTitleAdapter.kt,9/0/906aab42778fe00bf4a08b131af818868761a10f
+z
+Japp/src/main/java/com/skanderjabouzi/simplerecyclerview/v2/TeamsAdapter.kt,5/e/5e774abbe8a06313700bb28e1303910865c1dfe9
+r
+Bapp/src/main/java/com/skanderjabouzi/simplerecyclerview/v2/Team.kt,3/f/3fa5672900ad862af5931b2d10e014d05a4d189d

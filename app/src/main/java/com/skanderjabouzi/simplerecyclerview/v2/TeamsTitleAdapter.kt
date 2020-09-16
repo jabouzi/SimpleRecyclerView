@@ -5,19 +5,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.skanderjabouzi.simplerecyclerview.R
-import com.skanderjabouzi.simplerecyclerview.v2.Team
-import kotlinx.android.synthetic.main.teams_item.view.*
 
 class TeamsTitleAdapter() :
         RecyclerView.Adapter<TeamsTitleAdapter.TeamTitlesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeamTitlesViewHolder {
         val view =
-                LayoutInflater.from(parent.context).inflate(R.layout.teams_title_item, parent, false)
+                LayoutInflater.from(parent.context).inflate(R.layout.teams_titles, parent, false)
         return TeamTitlesViewHolder(view)
     }
 
-    override fun getItemViewType(position: Int): Int = R.layout.teams_title_item
+    override fun getItemViewType(position: Int): Int = R.layout.teams_titles
 
     override fun getItemCount(): Int {
         return 1
